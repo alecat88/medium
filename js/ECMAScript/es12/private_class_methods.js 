@@ -1,0 +1,20 @@
+// Let's create a class named User.
+class User {
+    constructor() {}
+
+    // The private methods can be created by prepending '#' before
+    // the method name.
+    #generateAPIKey() {
+        return "d8cf946093107898cb64963ab34be6b7e22662179a8ea48ca5603f8216748767";
+    }
+
+    getAPIKey() {
+        // The private methods can be accessed by using '#' before
+        // the method name.
+        return this.#generateAPIKey();
+    }
+}
+
+const user = new User();
+const userAPIKey = user.getAPIKey();
+console.log(userAPIKey); // This will print: d8cf946093107898cb64963ab34be6b7e22662179a8ea48ca5603f8216748767
